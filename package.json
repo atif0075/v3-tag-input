@@ -2,13 +2,13 @@
   "name": "v3-tag-input",
   "private": false,
   "version": "1.0.0",
-  "main": "./dist/v3-tab.umd.js",
-  "module": "./dist/v3-tab.es.js",
+  "main": "./dist/v3-tag-input.umd.js",
+  "module": "./dist/v3-tag-input.es.js",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/v3-tab.es.js",
-      "require": "./dist/v3-tab.umd.js"
+      "import": "./dist/v3-tag-input.es.js",
+      "require": "./dist/v3-tag-input.umd.js"
     }
   },
   "scripts": {
@@ -16,12 +16,19 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atif0075/v3-tag-input"
+  },
   "peerDependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist"
