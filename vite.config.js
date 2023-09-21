@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.js"),
-      formats: ["es", "umd"],
+      formats: ["es"],
       name: "v3-tag-input",
       fileName: (format) => `v3-tag-input.${format}.js`,
     },

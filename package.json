@@ -1,36 +1,54 @@
 {
   "name": "v3-tag-input",
-  "private": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atif0075/v3-tag-input"
+  },
   "main": "./dist/v3-tag-input.umd.js",
   "module": "./dist/v3-tag-input.es.js",
-  "type": "module",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  },
   "exports": {
     ".": {
       "import": "./dist/v3-tag-input.es.js",
       "require": "./dist/v3-tag-input.umd.js"
     }
   },
+  "files": [
+    "dist"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "vue3",
+    "vue",
+    "tag",
+    "input",
+    "tag input",
+    "vue tag input",
+    "tag input vue",
+    "vue tag",
+    "tag vue",
+    "tag input",
+    "v3 tag",
+    "v3 tag input",
+    "v3 tag input vue",
+    "v3 tag vue",
+    "input tags",
+    "vue input tags"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/atif0075/v3-tag-input"
-  },
-  "peerDependencies": {
-    "vue": "^3.3.4"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.4.5"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ]
+  "type": "module"
 }
