@@ -1,10 +1,11 @@
 {
   "name": "v3-tag-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/atif0075/v3-tag-input"
   },
+  "homepage": "https://v3-tag-input.vercel.app/",
   "main": "./dist/v3-tag-input.umd.js",
   "module": "./dist/v3-tag-input.es.js",
   "devDependencies": {
