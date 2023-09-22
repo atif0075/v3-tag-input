@@ -1,10 +1,6 @@
 <script setup>
 import { ref } from "vue";
 const props = defineProps({
-  allowEmpty: {
-    type: Boolean,
-    default: false,
-  },
   allowDuplicates: {
     type: Boolean,
     default: false,
@@ -27,7 +23,7 @@ const props = defineProps({
   },
   maxTags: {
     type: Number,
-    default: 0,
+    default: null,
   },
   onMaxTags: {
     type: Function,
@@ -43,37 +39,28 @@ function onDuplicate() {
 }
 const enterTag = () => {
   tagInput.value.classList.remove("tagInputError");
-  if (props.maxTags > 0) {
+  if (props.maxTags) {
     if (tags.value.length >= props.maxTags) {
       props.onMaxTags() ? props.onMaxTags() : null;
       tagInput.value.classList.add("tagInputError");
       return;
     }
   }
-  if (currentInput.value === "") {
-    if (props.allowEmpty) {
+
+  if (tags.value.includes(currentInput.value)) {
+    if (props.allowDuplicates) {
       tags.value.push(currentInput.value);
       currentInput.value = "";
+    } else {
+      props.onDuplicate() ? props.onDuplicate() : onDuplicate();
     }
   } else {
-    if (tags.value.includes(currentInput.value)) {
-      if (props.allowDuplicates) {
-        tags.value.push(currentInput.value);
-        currentInput.value = "";
-      } else {
-        props.onDuplicate() ? props.onDuplicate() : onDuplicate();
-      }
-    } else {
-      tags.value.push(currentInput.value);
-      currentInput.value = "";
-    }
+    tags.value.push(currentInput.value);
+    currentInput.value = "";
   }
-  console.log(tags.value);
-  // 
   emit("getTags", tags.value);
 };
 const removeTag = (index) => {
-  console.log(index);
   tags.value.splice(index, 1);
   props.onRemove() ? props.onRemove() : null;
 };
