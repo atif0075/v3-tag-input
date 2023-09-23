@@ -39,6 +39,7 @@ function onDuplicate() {
 }
 const enterTag = () => {
   tagInput.value.classList.remove("tagInputError");
+  if (currentInput.value === "") return;
   if (props.maxTags) {
     if (tags.value.length >= props.maxTags) {
       props.onMaxTags() ? props.onMaxTags() : null;
