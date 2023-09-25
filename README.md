@@ -1,6 +1,6 @@
 # V3TagInput
 
-This is a simple input field for entering V3 tags. It is written in vue 3 and has no dependencies. It is totally unstyled and can be used in any project. It is highly customizable and can be used in any project.
+This is a simple input field for entering tags in an input. It is written in vue 3 and has no dependencies. It is totally unstyled and can be used in any project. It is highly customizable and can be used in any project.
 
 ## Installation
 
