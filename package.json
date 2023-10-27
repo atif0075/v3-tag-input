@@ -1,25 +1,26 @@
 {
   "name": "v3-tag-input",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/atif0075/v3-tag-input"
   },
   "homepage": "https://v3-tag-input.vercel.app/",
-  "main": "./dist/v3-tag-input.umd.js",
   "module": "./dist/v3-tag-input.es.js",
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.4.5",
     "vitepress": "^1.0.0-rc.15"
   },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
   "peerDependencies": {
     "vue": "^3.3.4"
   },
   "exports": {
     ".": {
-      "import": "./dist/v3-tag-input.es.js",
-      "require": "./dist/v3-tag-input.umd.js"
+      "import": "./dist/v3-tag-input.es.js"
     }
   },
   "files": [
